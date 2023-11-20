@@ -5,6 +5,8 @@ import App from './App';
 import theme from './theme';
 import './index.css';
 
+// a2a32e2aa0784907a64a55d8f3e72e2a;
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
