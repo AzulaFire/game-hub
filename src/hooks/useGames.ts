@@ -1,5 +1,4 @@
 import useData from './useData';
-import { Genre } from './useGenres';
 import { GameQuery } from '../App';
 
 export interface Platform {
@@ -22,8 +21,9 @@ const useGames = (gameQuery: GameQuery) =>
     {
       params: {
         genres: gameQuery.genre?.id,
-        platforms: gameQuery.platform?.id,
+        parent_platforms: gameQuery.platform?.id,
         ordering: gameQuery.sortOrder,
+        search: gameQuery.searchText,
       },
     },
     //Arrays of Dependency
