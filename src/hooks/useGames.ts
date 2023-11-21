@@ -42,7 +42,7 @@ const useGames = () => {
         setLoading(false);
       });
 
-    return () => controller.abort();
+    // return () => controller.abort();
   }, []);
 
   return { games, error, isLoading };
