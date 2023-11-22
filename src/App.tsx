@@ -12,6 +12,7 @@ import SortSelector from './components/SortSelector';
 import GameHeading from './components/GameHeading';
 import HeroHeader from './components/HeroHeader';
 import Footer from './components/Footer';
+import EmojiDetails from './components/EmojiDetails';
 
 export interface GameQuery {
   genre: Genre | null;
@@ -70,6 +71,7 @@ function App() {
                 setGameQuery({ ...gameQuery, sortOrder })
               }
             />
+            <EmojiDetails />
           </Flex>
         </Box>
         <GameGrid gameQuery={gameQuery} />
