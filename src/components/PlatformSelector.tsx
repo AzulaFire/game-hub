@@ -1,3 +1,5 @@
+'use client';
+
 import { Menu, Button, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import usePlatforms from '../hooks/usePlatforms';
 import { BsChevronDown } from 'react-icons/bs';

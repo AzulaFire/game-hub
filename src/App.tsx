@@ -1,3 +1,5 @@
+'use client';
+
 import { Flex, Grid, GridItem, HStack, Show, Box } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
 import GameGrid from './components/GameGrid';
@@ -8,6 +10,8 @@ import PlatformSelector from './components/PlatformSelector';
 import { Platform } from './hooks/useGames';
 import SortSelector from './components/SortSelector';
 import GameHeading from './components/GameHeading';
+import HeroHeader from './components/HeroHeader';
+import Footer from './components/Footer';
 
 export interface GameQuery {
   genre: Genre | null;
@@ -23,10 +27,10 @@ function App() {
     <Grid
       templateAreas={{
         //Mobile Devices
-        base: `"nav" "main"`,
+        base: `"nav" "main" "footer"`,
 
         //Desktops 1024px
-        lg: `"nav nav" "aside main"`,
+        lg: `"nav nav" "aside main" "footer footer"`,
       }}
       templateColumns={{
         base: '1fr',
@@ -34,6 +38,7 @@ function App() {
       }}
     >
       <GridItem area='nav'>
+        <HeroHeader />
         <NavBar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
         />
@@ -68,6 +73,9 @@ function App() {
           </Flex>
         </Box>
         <GameGrid gameQuery={gameQuery} />
+      </GridItem>
+      <GridItem area='footer'>
+        <Footer />
       </GridItem>
     </Grid>
   );

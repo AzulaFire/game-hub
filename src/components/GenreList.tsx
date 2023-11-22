@@ -1,3 +1,5 @@
+'use client';
+
 import useGenres, { Genre } from '../hooks/useGenres';
 import {
   HStack,

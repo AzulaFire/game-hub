@@ -1,3 +1,5 @@
+'use client';
+
 import { IconType } from 'react-icons';
 import { HStack, Icon } from '@chakra-ui/react';
 import { Platform } from '../hooks/useGames';

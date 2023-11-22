@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import heart from '../assets/heart.png';
 import bullsEye from '../assets/bulls-eye.webp';
 import thumbsUp from '../assets/thumbs-up.webp';
